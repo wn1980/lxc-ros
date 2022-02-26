@@ -30,8 +30,5 @@ apt-get install -y \
   python3-numpy \
   python3-scipy
 
-# update pip and install some packages
-curl https://bootstrap.pypa.io/get-pip.py | python - && \
-pip install -U --no-cache-dir \
-  supervisor \
-  supervisor_twiddler
+# update pip
+curl https://bootstrap.pypa.io/get-pip.py | python -
