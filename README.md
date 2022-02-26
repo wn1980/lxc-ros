@@ -48,6 +48,10 @@ devices:
     connect: tcp:127.0.0.1:6901
     listen: tcp:0.0.0.0:6901
     type: proxy
+  ros-master:
+    connect: tcp:127.0.0.1:11311
+    listen: tcp:0.0.0.0:11311
+    type: proxy
 name: ros
 ```
 Add profile to container
