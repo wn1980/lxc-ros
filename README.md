@@ -2,10 +2,21 @@
 ## setup
 ```
 $ lxc launch ubuntu:20.04 focal
+$ lxc info focal --show-log
 $ lxc file push -r app focal/
 $ lxc exec focal bash
 $ /app/install/setup.sh
 ```
+
+## supervisord startup
+```
+$ cp /app/supervisord.service /etc/systemd/system
+$ systemctl daemon-reload
+$ systemctl enable supervisord.service
+$ systemctl start supervisord.service
+$ systemctl status supervisord.service
+```
+
 ## ROS+GUI profile
 ```
 $ lxc profile create ros
@@ -29,6 +40,14 @@ devices:
     path: /tmp/.X11-unix/X0
     source: /tmp/.X11-unix/X0
     type: disk
+  code-server:
+    connect: tcp:127.0.0.1:8008
+    listen: tcp:0.0.0.0:8008
+    type: proxy
+  noVNC:
+    connect: tcp:127.0.0.1:6901
+    listen: tcp:0.0.0.0:6901
+    type: proxy
 name: ros
 ```
 Add profile to container

@@ -3,8 +3,8 @@
 set -e
 
 ############# DON'T REMOVE ############
-source /opt/ros/$ROS_DISTRO/setup.bash
-source ~/catkin_ws/devel/setup.bash
+#source /opt/ros/$ROS_DISTRO/setup.bash
+#source ~/catkin_ws/devel/setup.bash
 #######################################
 
 #roslaunch --wait turtlebot_bringup minimal.launch &
