@@ -32,3 +32,5 @@ apt-get install -y \
 
 # update pip
 curl https://bootstrap.pypa.io/get-pip.py | python -
+
+echo "export HOME=/home/ubuntu" >> ~/.bashrc
