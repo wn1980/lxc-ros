@@ -59,3 +59,8 @@ Add profile to container
 $ lxc profile add focal ros
 $ lxc restart focal
 ```
+## Ubuntu 22.04 (probe Windows)
+```
+$ sudo echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
+$ sudo update-grub
+```
