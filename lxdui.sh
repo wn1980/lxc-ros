@@ -2,6 +2,8 @@
 
 set -e
 
+sudo apt install python3-setuptools python3-pip
+
 cd ~
 
 if [ ! -d ~/lxdui ]; then
@@ -16,4 +18,8 @@ fi
 
 cd ~/lxdui
 
+#sudo pip3 install itsdangerous==2.0.1
+
 sudo lxdui start
+
+
