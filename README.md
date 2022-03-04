@@ -36,9 +36,9 @@ config:
       - "apt-add-repository 'http://packages.ros.org/ros2/ubuntu'"
 description: ROS
 devices:
-  X0:
-    path: /tmp/.X11-unix/X0
-    source: /tmp/.X11-unix/X0
+  X1:
+    path: /tmp/.X11-unix/X1
+    source: /tmp/.X11-unix/X1
     type: disk
   code-server:
     connect: tcp:127.0.0.1:8008
