@@ -2,7 +2,8 @@
 
 set -e
 
-VERSION=3.12.0
+#VERSION=3.12.0
+VERSION=4.1.0
 
 #if ! command -v code-server &> /dev/null
 #then
