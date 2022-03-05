@@ -18,6 +18,10 @@ devices:
     nictype: macvlan
     parent: wlp3s0
     type: nic
+  ttyd:
+    connect: tcp:127.0.0.1:1000
+    listen: tcp:0.0.0.0:1000
+    type: proxy
   code-server:
     connect: tcp:127.0.0.1:8008
     listen: tcp:0.0.0.0:8008
