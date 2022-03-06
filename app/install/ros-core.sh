@@ -20,3 +20,4 @@ sudo rosdep init
 rosdep update
 
 echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
+echo "export ROS_MASTER_URI=http://localhost:11311" >> ~/.bashrc
