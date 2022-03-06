@@ -35,3 +35,20 @@ sudo apt-get autoremove -y
 sudo apt-get clean 
 sudo rm -rf /var/lib/apt/lists/*
 rm -f $FILE
+
+
+cat > "/app/conf.d/code-server.conf" <<EOF
+[program:code-server]
+command=code-server --bind-addr 0.0.0.0:8008 --cert --auth none 
+user=ubuntu
+autorestart=true
+stdout_logfile=/app/logs/code-server.log
+redirect_stderr=true
+#autostart=true
+#stopwaitsecs=30
+#stdout_logfile=/dev/stdout
+#stdout_logfile_maxbytes=0
+#stderr_logfile=/dev/stderr
+#stderr_logfile_maxbytes=0
+
+EOF

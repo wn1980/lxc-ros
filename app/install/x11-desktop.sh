@@ -34,4 +34,21 @@ apt-get install -y \
 # update pip
 curl https://bootstrap.pypa.io/get-pip.py | python -
 
-echo "export HOME=/home/ubuntu" >> /home/ubuntu/.bashrc
+cat > "/app/conf.d/xsession.conf" <<EOF
+[program:xsession]
+command=jwm -display :9 -f /app/system.jwmrc
+user=ubuntu
+autorestart=true
+stdout_logfile=/app/logs/xsession.log
+redirect_stderr=true
+
+EOF
+
+cat > "/app/conf.d/xvnc.conf" <<EOF
+[program:xvnc]
+command=/app/bin/xvnc.sh
+autorestart=true
+stdout_logfile=/app/logs/xvnc.log
+redirect_stderr=true
+
+EOF

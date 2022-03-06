@@ -2,6 +2,17 @@
 
 set -e
 
+apt-get update && apt-get upgrade -y
+apt-get install -y \
+  apt-transport-https \
+  build-essential \
+  curl \
+  python-is-python3 \
+  python3-dev 
+
+# update pip
+curl https://bootstrap.pypa.io/get-pip.py | python -
+
 pip install -U --no-cache-dir \
   supervisor \
   supervisor_twiddler

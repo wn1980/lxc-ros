@@ -26,3 +26,12 @@ cat > "$NO_VNC_HOME/index.html" <<EOF
 </html>
 
 EOF
+
+cat > "/app/conf.d/no-vnc.conf" <<EOF
+[program:no-vnc]
+command=/opt/noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 6901
+autorestart=true
+stdout_logfile=/app/logs/no-vnc.log
+redirect_stderr=true
+
+EOF
