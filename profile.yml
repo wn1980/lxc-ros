@@ -16,8 +16,8 @@ devices:
   eth1:
     name: eth1
     nictype: macvlan
-    #parent: wlp3s0
-    parent: wlan0
+    parent: wlp3s0
+    #parent: wlan0
     type: nic
   ttyd:
     connect: tcp:127.0.0.1:1000

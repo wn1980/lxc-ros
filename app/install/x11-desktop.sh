@@ -27,28 +27,21 @@ apt-get install -y \
   tigervnc-xorg-extension \
   python-is-python3 \
   python3-dev \
-  python3-pip \
   python3-numpy \
   python3-scipy
 
-# update pip
-curl https://bootstrap.pypa.io/get-pip.py | python -
+cat > "/app/conf.d/vnc.conf" <<EOF
+[program:xvnc]
+command=/app/bin/xvnc.sh
+autorestart=true
+stdout_logfile=/app/logs/xvnc.log
+redirect_stderr=true
 
-cat > "/app/conf.d/xsession.conf" <<EOF
 [program:xsession]
 command=jwm -display :9 -f /app/system.jwmrc
 user=ubuntu
 autorestart=true
 stdout_logfile=/app/logs/xsession.log
-redirect_stderr=true
-
-EOF
-
-cat > "/app/conf.d/xvnc.conf" <<EOF
-[program:xvnc]
-command=/app/bin/xvnc.sh
-autorestart=true
-stdout_logfile=/app/logs/xvnc.log
 redirect_stderr=true
 
 EOF
