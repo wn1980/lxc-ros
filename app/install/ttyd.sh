@@ -54,4 +54,6 @@ redirect_stderr=true
 
 EOF
 
+systemctl restart supervisord.service
+
 #echo "export HOME=/home/ubuntu" >> /home/ubuntu/.bashrc

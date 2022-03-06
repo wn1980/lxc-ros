@@ -35,3 +35,5 @@ stdout_logfile=/app/logs/no-vnc.log
 redirect_stderr=true
 
 EOF
+
+systemctl restart supervisord.service

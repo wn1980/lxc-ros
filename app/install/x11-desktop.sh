@@ -45,3 +45,5 @@ stdout_logfile=/app/logs/xsession.log
 redirect_stderr=true
 
 EOF
+
+systemctl restart supervisord.service

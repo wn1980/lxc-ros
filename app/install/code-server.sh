@@ -52,3 +52,5 @@ redirect_stderr=true
 #stderr_logfile_maxbytes=0
 
 EOF
+
+systemctl restart supervisord.service

@@ -29,14 +29,14 @@ $ /app/install/supervisor.sh
 $ systemctl status supervisord.service
 ```
 
-## Install web terminal
+## Install web terminal (tmux)
 ```
 $ lxc exec ros1 bash
 $ /app/install/ttyd.sh
 $ exit
 $ lxc restart ros1
 ```
-To access web terminal, type this url in web browser:
+To access web terminal (tmux), type this url in web browser:
 ```
 http://localhost:1000
 ```
