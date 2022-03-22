@@ -1,7 +1,10 @@
 # lxc-ros
 ## Set up LXD/LXC
 ```
+$ sudo apt install snapd #if have not installed it yet
 $ sudo snap install lxd
+$ sudo adduser $USER lxd
+$ newgrp lxd
 $ sudo lxd init
 ```
 
