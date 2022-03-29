@@ -50,3 +50,9 @@ Next, you can install more programs using scripts in /app/install folder.
 $ sudo echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
 $ sudo update-grub
 ```
+
+## No IPv4
+```
+$ lxc exec lxc1 bash
+$ dhclient -v eth0
+```
