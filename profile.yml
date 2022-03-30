@@ -9,15 +9,15 @@ config:
       - "apt-add-repository 'http://packages.ros.org/ros2/ubuntu'"
 description: ROS
 devices:
-  X11:
-    path: /tmp/.X11-unix/X1
-    source: /tmp/.X11-unix/X1
-    type: disk
+  #X11:
+  #  path: /tmp/.X11-unix/X1
+  #  source: /tmp/.X11-unix/X1
+  #  type: disk
   eth1:
     name: eth1
     nictype: macvlan
-    parent: wlp3s0
-    #parent: wlan0
+    #parent: wlp3s0
+    parent: wlan0
     type: nic
   ttyd:
     connect: tcp:127.0.0.1:1000
