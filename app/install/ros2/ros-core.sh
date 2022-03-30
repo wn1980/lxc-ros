@@ -28,7 +28,7 @@ sudo apt install -y \
     python3-colcon-common-extensions
 
 sudo rosdep init
-rosdep update
+sudo rosdep fix-permissions && rosdep update
 
 echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc

@@ -5,6 +5,8 @@ set -e
 #define ROS distro
 ROS_DISTRO=galactic
 
+HOME=/home/ubuntu
+
 TURTLEBOT_WS=$HOME/dev_ws
 
 sudo apt-get install git -y
