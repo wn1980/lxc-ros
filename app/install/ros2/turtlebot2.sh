@@ -65,3 +65,5 @@ sudo apt-get install  -y \
   && sudo apt-get autoremove -y \
   && sudo apt-get clean \
   && sudo rm -rf /var/lib/apt/lists/*
+
+echo "source $HOME/dev_ws/install/setup.bash" >> ~/.bashrc
