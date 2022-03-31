@@ -56,3 +56,9 @@ $ sudo update-grub
 $ lxc exec lxc1 bash
 $ dhclient -v eth0
 ```
+
+## Resource Limits
+```
+$ lxc config set ros1 limits.memory 4GB
+$ lxc config set ros1 limits.cpu 4
+```
