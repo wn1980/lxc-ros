@@ -7,18 +7,18 @@ config:
       - "apt-key adv --fetch-keys 'https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc'"
       - "apt-add-repository 'http://packages.ros.org/ros/ubuntu'"
       - "apt-add-repository 'http://packages.ros.org/ros2/ubuntu'"
-description: ROS
+description: service ports
 devices:
   #X11:
   #  path: /tmp/.X11-unix/X1
   #  source: /tmp/.X11-unix/X1
   #  type: disk
-  eth1:
-    name: eth1
-    nictype: macvlan
+  #eth1:
+  #  name: eth1
+  #  nictype: macvlan
     #parent: wlp3s0
-    parent: wlan0
-    type: nic
+  #  parent: wlan0
+  #  type: nic
   ttyd:
     connect: tcp:127.0.0.1:1000
     listen: tcp:0.0.0.0:1000
@@ -35,4 +35,20 @@ devices:
     connect: tcp:127.0.0.1:11311
     listen: tcp:0.0.0.0:11311
     type: proxy
-name: ros
+  discovery-multicast:
+    connect: tcp:127.0.0.1:7400
+    listen: tcp:0.0.0.0:7400
+    type: proxy
+  user-multicast:
+    connect: tcp:127.0.0.1:7401
+    listen: tcp:0.0.0.0:7401
+    type: proxy
+  discovery-unicast:
+    connect: tcp:127.0.0.1:7410
+    listen: tcp:0.0.0.0:7410
+    type: proxy
+  user-unicast:
+    connect: tcp:127.0.0.1:7411
+    listen: tcp:0.0.0.0:7411
+    type: proxy
+name: ports

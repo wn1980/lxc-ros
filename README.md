@@ -18,10 +18,10 @@ $ lxc file push -r app ros1/
 ## ROS+GUI profile
 Create and add profile:
 ```
-$ lxc profile create ros
-$ lxc profile edit ros < profile.yml
-$ lxc profile show ros
-$ lxc profile add ros1 ros
+$ lxc profile create ports
+$ lxc profile edit ports < profiles/ports.yml
+$ lxc profile show ports
+$ lxc profile add ros1 ports
 $ lxc restart ros1
 ```
 
