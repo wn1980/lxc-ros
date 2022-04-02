@@ -27,6 +27,8 @@ sudo apt install -y \
     python3-rosdep \
     python3-colcon-common-extensions
 
+sudo rm -f /etc/ros/rosdep/sources.list.d/20-default.list
+
 sudo rosdep init
 sudo rosdep fix-permissions && rosdep update
 

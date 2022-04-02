@@ -16,8 +16,10 @@ sudo apt install -y ros-${ROS_DISTRO}-ros-core
 
 sudo apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 
+sudo rm -f /etc/ros/rosdep/sources.list.d/20-default.list
+
 sudo rosdep init
-rosdep update
+sudo rosdep fix-permissions && rosdep update
 
 echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
 echo "export ROS_MASTER_URI=http://localhost:11311" >> ~/.bashrc
