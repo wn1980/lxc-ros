@@ -10,9 +10,9 @@ $ sudo lxd init
 
 ## Setup fresh container
 ```
-$ lxc launch ubuntu:20.04 ros-c
-$ lxc info ros-c --show-log
-$ lxc file push -r app ros-c/
+$ lxc launch ubuntu:20.04 ros
+$ lxc info ros --show-log
+$ lxc file push -r app ros/
 ```
 
 ## ROS+GUI profile
@@ -21,23 +21,23 @@ Create and add profile:
 $ lxc profile create ports
 $ lxc profile edit ports < profiles/ports.yml
 $ lxc profile show ports
-$ lxc profile add ros-c ports
-$ lxc restart ros-c
+$ lxc profile add ros ports
+$ lxc restart ros
 ```
 
 ## Setup supervisord
 ```
-$ lxc exec ros-c bash
+$ lxc exec ros bash
 $ /app/install/supervisor.sh
 $ systemctl status supervisord.service
 ```
 
 ## Install web terminal (tmux)
 ```
-$ lxc exec ros-c bash
+$ lxc exec ros bash
 $ /app/install/ttyd.sh
 $ exit
-$ lxc restart ros-c
+$ lxc restart ros
 ```
 To access web terminal (tmux), type this url in web browser:
 ```
@@ -59,6 +59,6 @@ $ dhclient -v eth0
 
 ## Resource Limits
 ```
-$ lxc config set ros-c limits.memory 4GB
-$ lxc config set ros-c limits.cpu 4
+$ lxc config set ros limits.memory 4GB
+$ lxc config set ros limits.cpu 4
 ```
