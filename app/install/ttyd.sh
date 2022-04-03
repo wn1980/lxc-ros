@@ -47,7 +47,7 @@ rm -rf ~/ttyd
 
 cat > "/app/conf.d/ttyd.conf" <<EOF
 [program:ttyd]
-command=/usr/local/bin/ttyd -p 1000 -u 1000 -w /home/ubuntu tmux
+command=/usr/local/bin/ttyd -p 1000 -u 1000 -g 1000 -w /home/ubuntu tmux
 autorestart=true
 stdout_logfile=/app/logs/xvnc.log
 redirect_stderr=true
