@@ -29,7 +29,7 @@ sudo apt install -y \
 
 sudo rm -f /etc/ros/rosdep/sources.list.d/20-default.list
 
-sudo rosdep init
+sudo rosdep init && sudo rosdep update
 sudo rosdep fix-permissions && rosdep update
 
 echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
